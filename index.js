@@ -209,7 +209,7 @@ const actionConfirm =()=>{
 //Animation listen event
 button.addEventListener('animationend',()=>{
     button.style.pointerEvents = 'all';
-    //spin.play();
+    spin.play();
     // Sau khi quay xong, transform sẽ trả vị trí về như cũ .
     // Setting lại vị trí ban đầu
     circle.style.transform = "rotate("+deg+"deg)";
@@ -242,6 +242,6 @@ window.addEventListener('resize', ()=>{
     background.style.height = `${height}px`;
     background.style.top = '-1px';
     background.style.left = '-1px';
-    resultgift.style.top = '-1px';
-    resultgift.style.left = '-1px';
+    // resultgift.style.top = '-1px';
+    // resultgift.style.left = '-1px';
 });
