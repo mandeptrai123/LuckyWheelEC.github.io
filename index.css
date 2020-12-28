@@ -1,0 +1,147 @@
+#circle{
+    position: fixed;
+    animation-duration: 6s;
+    z-index: 0;
+}
+
+#button{
+    position: fixed;
+    animation-duration: 0.1s;
+    z-index: 2;
+}
+
+#arrow{
+    position: fixed;
+    z-index: 1;
+}
+
+#luckyaround{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+}
+
+#background{
+    z-index: -1;
+    position: fixed;
+
+}
+
+#text{
+    z-index: 1;
+    position: fixed;
+    color: yellow;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+#_resultgift{
+    background-color: #0b422d;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation-duration: 2s;
+    animation-name: hidden;
+}
+
+#resultgift{
+    z-index: 3;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    margin-top: 5%;
+}
+@keyframes return {
+    
+}
+
+@keyframes hidden{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes gift1 {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(3600deg)}
+}
+
+@keyframes gift2 {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(7230deg)}
+}
+
+
+@keyframes gift3 {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(4200deg)}
+}
+
+@keyframes gift4 {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(4500deg)}
+}
+
+@keyframes gift5 {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(4800deg)}
+}
+
+@keyframes gift6 {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(5100deg)}
+}
+
+@keyframes gift7 {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(5400deg)}
+}
+
+@keyframes gift8 {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(5700deg)}
+}
+
+@keyframes gift9 {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(6000deg)}
+}
+
+@keyframes gift10 {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(6300deg)}
+}
+
+@keyframes gift11 {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(10980deg)}
+}
+@keyframes gift12 {
+    from {transform: rotate(0deg)}
+    to {transform: rotate(6900deg)}
+}
+
+@keyframes buttonin{
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+@keyframes buttonout{
+    from{
+        transform: scale(1.2);
+    }
+    to{
+        transform: scale(1);
+    }
+}

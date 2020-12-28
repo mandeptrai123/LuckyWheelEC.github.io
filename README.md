@@ -1,2 +1,2 @@
-# LuckyWheelEC.github.io
+# LuckyWheelEC
  
