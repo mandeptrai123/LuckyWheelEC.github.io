@@ -192,6 +192,7 @@ var random=()=>{
 
 //Animation circle
  const actionRound =()=>{
+     spin.play();
     circle.style.transform = `rotate(${0}deg)`;
     button.style.animationName = 'buttonin';
     var result = random();
