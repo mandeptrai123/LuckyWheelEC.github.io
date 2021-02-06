@@ -7,7 +7,7 @@ const background = document.getElementById('background');
 const text = document.getElementById('text');
 
 const resultgift = document.getElementById('resultgift');
-
+const _resultgift = document.getElementById('_resultgift');
 //Sound
 const spin = new Audio('../sound/sound_luckywheel.mp3');
 // const win = new Audio('../sound/sound_winprized.mp3');
@@ -26,18 +26,21 @@ var deg = 0;
 var degCurrent = 0;
 
 //gift
-const gift1 = '../items/icon_1_500px.png';
-const gift2 = '../items/icon_2_500px.png';
-const gift3 = '../items/icon_3_500px.png';
-const gift4 = '../items/icon_4_500px.png';
-const gift5 = '../items/icon_5_500px.png';
-const gift6 = '../items/icon_6_500px.png';
-const gift7 = '../items/icon_7_500px.png';
-const gift8 = '../items/icon_8_500px.png';
-const gift9 = '../items/icon_9_500px.png';
-const gift10 = '../items/icon_10_500px.png';
-const gift11 = '../items/icon_11_500px.png';
-const gift12 = '../items/icon_12_500px.png';
+const gift1 = '../items/voucher_12_2509_959.png';
+const gift2 = '../items/voucher_1_2509_959.png';
+const gift3 = '../items/voucher_2_2509_959.png';
+const gift4 = '../items/voucher_3_2509_959.png';
+const gift5 = '../items/voucher_4_2509_959.png';
+const gift6 = '../items/voucher_5_2509_959.png';
+const gift7 = '../items/voucher_6_2509_959.png';
+const gift8 = '../items/voucher_7_2509_959.png';
+const gift9 = '../items/voucher_8_2509_959.png';
+const gift10 = '../items/voucher_9_2509_959.png';
+const gift11 = '../items/voucher_10_2509_959.png';
+const gift12 = '../items/voucher_11_2509_959.png';
+
+
+
 
 //Get data online
 
@@ -71,8 +74,12 @@ background.style.width = `${width}px`;
 background.style.height = `${height}px`;
 background.style.top = '-1px';
 background.style.left = '-1px';
-resultgift.style.top = '-1px';
-resultgift.style.left = '-1px';
+
+_resultgift.style.top = '-1px';
+_resultgift.style.left = '-1px';
+
+
+
 
 
 //#endregion
@@ -205,7 +212,7 @@ var random=()=>{
 }
 const actionConfirm =()=>{
     //resultgift.setAttribute('src','');
-    //_resultgift.hidden = true;
+    _resultgift.hidden = true;
    // circle.style.transform = `rotate(${deg}deg)`;
     //circle.style.animationName = 'none';
    // button.style.pointerEvents = 'all';
@@ -224,6 +231,7 @@ button.addEventListener('animationend',()=>{
 
 circle.addEventListener('animationend', ()=>{
     resultgift.hidden = false;
+    _resultgift.hidden = false;
 })
 
 window.addEventListener('resize', ()=>{
