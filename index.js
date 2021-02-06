@@ -5,12 +5,13 @@ const arrow = document.getElementById('arrow');
 const view = document.getElementById('luckyaround');
 const background = document.getElementById('background');
 const text = document.getElementById('text');
-// const resultgift = document.getElementById('resultgift');
-// const _resultgift = document.getElementById('_resultgift');
+
+const resultgift = document.getElementById('resultgift');
+const itemtgift = document.getElementById('itemresult');
 
 //Sound
 const spin = new Audio('../sound/sound_luckywheel.mp3');
-const win = new Audio('../sound/sound_winprized.mp3');
+// const win = new Audio('../sound/sound_winprized.mp3');
 
 //GetUserID From host
 let hostname = window.location.search;
@@ -26,17 +27,18 @@ var deg = 0;
 var degCurrent = 0;
 
 //gift
-const gift1 = '../image/gift_10k.png';
-const gift2 = '../image/gift_20k.png';
-const gift3 = '../image/gift_30k.png';
-const gift4 = '../image/gift_50per.png';
-const gift5 = '../image/gift_bamidou.png';
-const gift6 = '../image/gift_bamifalo.png';
-const gift7 = '../image/gift_bamiro.png';
-const gift8 = '../image/gift_helmet.png';
-const gift9 = '../image/gift_zeromeat.png';
-const gift10 = '../image/gift_sugarbutter.png';
-const gift11 = '../image/gift_sugargarlic.png';
+const gift1 = '../items/icon_1_500px.png';
+const gift2 = '../items/icon_2_500px.png';
+const gift3 = '../items/icon_3_500px.png';
+const gift4 = '../items/icon_4_500px.png';
+const gift5 = '../items/icon_5_500px.png';
+const gift6 = '../items/icon_6_500px.png';
+const gift7 = '../items/icon_7_500px.png';
+const gift8 = '../items/icon_8_500px.png';
+const gift9 = '../items/icon_9_500px.png';
+const gift10 = '../items/icon_10_500px.png';
+const gift11 = '../items/icon_11_500px.png';
+const gift12 = '../items/icon_12_500px.png';
 
 //Get data online
 
@@ -48,10 +50,12 @@ var resultBefore = 0;
 if(height>width){
     r = width;
     view.style.marginTop = `${height/2 - r/2}px`;
+    resultgift.style.marginTop = `${height/2 - r/2}px`;
     
 } else {
     r = height;
     view.style.marginLeft = `${width/2 - r/1.8}px`;
+    resultgift.style.marginLeft = `${width/2 - r/1.8}px`;
 }
 
 //#endregion
@@ -83,6 +87,7 @@ background.style.left = '-1px';
 
 const ResultGift=(result)=>{
     //button.style.pointerEvents = 'none';
+    itemtgift.setAttribute('src',gift1);
     switch(result){
         case 1:{
             console.log('Voucher 10k');
@@ -209,12 +214,18 @@ const actionConfirm =()=>{
 }
 //Animation listen event
 button.addEventListener('animationend',()=>{
+    
     button.style.pointerEvents = 'all';
     spin.play();
+    
     // Sau khi quay xong, transform sẽ trả vị trí về như cũ .
     // Setting lại vị trí ban đầu
     circle.style.transform = "rotate("+deg+"deg)";
 
+})
+
+circle.addEventListener('animationend', ()=>{
+    resultgift.hidden = false;
 })
 
 window.addEventListener('resize', ()=>{
