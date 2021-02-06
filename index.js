@@ -7,7 +7,6 @@ const background = document.getElementById('background');
 const text = document.getElementById('text');
 
 const resultgift = document.getElementById('resultgift');
-const itemtgift = document.getElementById('itemresult');
 
 //Sound
 const spin = new Audio('../sound/sound_luckywheel.mp3');
@@ -72,8 +71,8 @@ background.style.width = `${width}px`;
 background.style.height = `${height}px`;
 background.style.top = '-1px';
 background.style.left = '-1px';
-// resultgift.style.top = '-1px';
-// resultgift.style.left = '-1px';
+resultgift.style.top = '-1px';
+resultgift.style.left = '-1px';
 
 
 //#endregion
@@ -87,61 +86,60 @@ background.style.left = '-1px';
 
 const ResultGift=(result)=>{
     //button.style.pointerEvents = 'none';
-    itemtgift.setAttribute('src',gift1);
     switch(result){
         case 1:{
             console.log('Voucher 10k');
             deg = 3720;
-            //resultgift.setAttribute('src',gift1);
+            resultgift.setAttribute('src',gift1);
             circle.style.animationName = 'gift1';
             break;
         }
         case 2:{
             console.log('Voucher 20k');
             deg = 3630;
-            //resultgift.setAttribute('src',gift2);
+            resultgift.setAttribute('src',gift2);
             circle.style.animationName = 'gift2';
             break;
         }
         case 3:{
             console.log('Voucher 30k');
             deg = 3840;
-            //resultgift.setAttribute('src',gift3);
+            resultgift.setAttribute('src',gift3);
             circle.style.animationName = 'gift3';
             break;
         }
         case 4:{
             console.log('Voucher 50k');
             deg = 3600;
-            //resultgift.setAttribute('src',gift4);
+            resultgift.setAttribute('src',gift4);
             circle.style.animationName = 'gift4';
             break;
         }
         case 5:{
             console.log('bamidou');
             deg = 3750;
-            //resultgift.setAttribute('src',gift5);
+            resultgift.setAttribute('src',gift5);
             circle.style.animationName = 'gift5';
             break;
         }
         case 6:{
             console.log('bamifalo');
             deg = 3660;
-            //resultgift.setAttribute('src',gift6);
+            resultgift.setAttribute('src',gift6);
             circle.style.animationName = 'gift6';
             break;
         }
         case 7:{
             console.log('bamiro');
             deg = 3900;
-            //resultgift.setAttribute('src',gift7);
+            resultgift.setAttribute('src',gift7);
             circle.style.animationName = 'gift7';
             break;
         }
         case 8:{
             console.log('Non bao hiem');
             deg = 3810;
-            //resultgift.setAttribute('src',gift8);
+            resultgift.setAttribute('src',gift8);
             circle.style.animationName = 'gift8';
             break;
         }
@@ -155,14 +153,14 @@ const ResultGift=(result)=>{
         case 10:{
             console.log('Bo duong');
             deg = 3690;
-            //resultgift.setAttribute('src',gift10);
+            resultgift.setAttribute('src',gift10);
             circle.style.animationName = 'gift10';
             break;
         }
         case 11:{
             console.log('Bo toi');
             deg = 3780;
-            //resultgift.setAttribute('src',gift11);
+            resultgift.setAttribute('src',gift11);
             circle.style.animationName = 'gift11';
             break;
         }
